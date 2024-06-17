@@ -8,7 +8,7 @@ dotenvExpand.expand(myEnv);
 
 export default defineConfig({
   define: {
-    base: "/PadelMarkkinat/",
+    base: "/padel/",
     'process.env': process.env
   }
 });
