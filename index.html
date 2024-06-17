@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel Turnaus</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script type="module" src="scripts.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#etusivu">Etusivu</a></li>
+            <li><a href="#aikataulu">Aikataulu</a></li>
+            <li><a href="#rekisterointi">Rekisteröityminen</a></li>
+            <li><a href="#joukkueet">Joukkueet</a></li>
+            <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+
+    <section id="etusivu">
+        <h1>Tervetuloa Padel Turnaukseen!</h1>
+        <p>Tähän varmaan Eva kirjoittaa jonku kauniin runon!</p>
+    </section>
+
+    <section id="aikataulu">
+        <h2>Peliaikataulu</h2>
+        <p>Täälläki pitäis jottai paskaa olla</p>
+        <!-- Lisää aikataulu -->
+    </section>
+
+    <section id="rekisterointi">
+        <h2>Rekisteröityminen</h2>
+        <form id="registrationForm">
+            <label for="teamName">Joukkueen nimi:</label>
+            <input type="text" id="teamName" name="teamName" required>
+            <label for="player1">Pelaaja 1:</label>
+            <input type="text" id="player1" name="player1" required>
+            <label for="player2">Pelaaja 2:</label>
+            <input type="text" id="player2" name="player2" required>
+            <input type="submit" value="Rekisteröidy">
+        </form>
+    </section>
+
+    <section id="joukkueet">
+        <h2>Joukkueet</h2>
+        <div id="teams"></div>
+    </section>
+
+    <section id="tulokset">
+        <h2>Tulokset</h2>
+        <!-- Lisää tulokset -->
+    </section>>
+
+    <footer>
+        <p>&copy; 2024 Padel Turnaus. Kaikki oikeudet pidätetään. Ja vitut pidätetä XD</p>
+    </footer>
+</body>
+</html>
