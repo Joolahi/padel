@@ -1,4 +1,4 @@
-// Firebase konfiguraatio
+
 const firebaseConfig = {
   apiKey: process.env.VITE_API_KEY,
   authDomain: process.env.VITE_AUTH_DOMAIN,
@@ -8,13 +8,11 @@ const firebaseConfig = {
   appId: process.env.VITE_APP_ID
 };
 
-// Initialisoi Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Viittaus Firestoreen
+
 const db = firebase.firestore();
 
-// Lomakkeen käsittely
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const teamName = document.getElementById('teamName').value;
@@ -36,7 +34,6 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     });
 });
 
-// Hakee joukkueet Firestoresta ja näyttää ne kortteina
 function fetchTeams() {
     db.collection('teams').orderBy('timestamp', 'desc').get().then((querySnapshot) => {
         const teamsContainer = document.getElementById('teams');
@@ -62,7 +59,15 @@ function fetchTeams() {
     });
 }
 
-// Alustaa joukkueiden hakemisen sivun latauksen yhteydessä
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     fetchTeams();
 });
